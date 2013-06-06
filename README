@@ -1,0 +1,6 @@
+
+I wrote this perl script to... sort my mp3 files ! Tadaa !
+
+Usage:
+
+mp3sort -s [full path to source directory] -d [full path to destination directory]
