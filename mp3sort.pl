@@ -39,7 +39,7 @@ sub process {
 	$mp3 = MP3::Tag->new($file);
 	($title, $track, $artist, $album, $comment, $year, $genre) = $mp3->autoinfo();
 	$albumdir = qq{$artist - $year - $album};
-	$targetfile = qq{$track - $artist - $year - $album.mp3};
+	$targetfile = qq{$track - $artist - $year - $title.mp3};
 	( $initial ) = $artist =~ m/^(.)/;
 	
 	if(!$opt_q)
@@ -107,7 +107,7 @@ sub helpmsg(){
  -d    <destination_directory>
  -o    overwrite existing files
  -v    Verbose Mode.
- -q    Quiet Mode.};
+ -q    Quiet Mode.\n};
 }
 
 __END__
